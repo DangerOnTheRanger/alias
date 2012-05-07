@@ -14,4 +14,4 @@ Overview
 Alias is a FPS game made in the style of classics like Doom and Marathon. That means:
 
  * no jumping
- * no real physics
+ * no true physics simulation
