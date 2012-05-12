@@ -18,6 +18,7 @@ __date__ = "May 11, 2012 10:20:08 PM"
 import os
 
 import alias.utils
+import alias.shadow
 
 
 TELEPORTER_SCALE = 10.0
@@ -39,6 +40,10 @@ class StartTeleporter(object):
         self._model.setZ(self._model.getZ() - Z_OFFSET)
         self._model.setScale(TELEPORTER_SCALE)
         self._model.reparentTo(window.render)
+
+        self._shadow = alias.shadow.make_blob_shadow(2, window)
+        self._shadow.reparentTo(self._model)
+        self._shadow.setZ(0.01)
 
     @property
     def position(self):
@@ -62,3 +67,7 @@ class ExitTeleporter(object):
         self._model.setZ(self._model.getZ() - Z_OFFSET)
         self._model.setScale(TELEPORTER_SCALE)
         self._model.reparentTo(window.render)
+
+        self._shadow = alias.shadow.make_blob_shadow(2, window)
+        self._shadow.reparentTo(self._model)
+        self._shadow.setZ(0.01)

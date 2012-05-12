@@ -15,6 +15,7 @@ __author__ = "DangerOnTheRanger"
 __date__ = "May 11, 2012 8:27:57 PM"
 
 
+import panda3d.core
 import panda3d.ai
 
 import alias.utils
@@ -47,6 +48,8 @@ class Level(object):
         for corridor in self._corridors:
             corridor.load(self._window)
 
+        self._window.cTrav = panda3d.core.CollisionTraverser()
+
         for enemy in self._enemies:
             enemy.load(self._window, self._ai_world)
 
@@ -58,6 +61,8 @@ class Level(object):
         self._window.taskMgr.add(self._update_ai, 'AI update loop')
 
     def teardown(self):
+
+        self._teardown_player()
 
         for enemy in self._enemies:
             enemy.teardown()

@@ -45,7 +45,6 @@ class Player(object):
         self._collision_node.node().setFromCollideMask(panda3d.core.GeomNode.getDefaultCollideMask())
 
         self._collision_handler = panda3d.core.CollisionHandlerPusher()
-        self._window.cTrav = panda3d.core.CollisionTraverser()
         self._window.cTrav.addCollider(self._collision_node, self._collision_handler)
         self._collision_handler.addCollider(self._collision_node, self._node)
 
