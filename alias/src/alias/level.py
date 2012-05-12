@@ -48,6 +48,7 @@ class Level(object):
         for corridor in self._corridors:
             corridor.load(self._window)
 
+        self._window.render.flattenStrong()
         self._window.cTrav = panda3d.core.CollisionTraverser()
 
         for enemy in self._enemies:
@@ -67,6 +68,8 @@ class Level(object):
         for enemy in self._enemies:
             enemy.teardown()
 
+        self._teardown_ai()
+
         for corridor in self._corridors:
             corridor.teardown()
 
@@ -77,6 +80,9 @@ class Level(object):
 
         self._ai_world.update()
         return task.cont
+
+    def _teardown_ai(self):
+        pass
 
     def _load_player(self):
 

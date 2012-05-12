@@ -26,6 +26,8 @@ import alias.levelloader
 def main():
 
     panda3d.core.loadPrcFileData('', 'show-frame-rate-meter #t')
+    panda3d.core.loadPrcFileData('', 'want-pstats #t')
+
     window = ShowBase()
     level = alias.levelloader.load_level(sys.argv[1], window)
     level.load()
