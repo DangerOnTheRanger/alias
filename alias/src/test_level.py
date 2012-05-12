@@ -17,6 +17,7 @@ __date__ = "May 11, 2012 8:55:39 PM"
 
 import sys
 
+import panda3d.core
 from direct.showbase.ShowBase import ShowBase
 
 import alias.levelloader
@@ -24,6 +25,7 @@ import alias.levelloader
 
 def main():
 
+    panda3d.core.loadPrcFileData('', 'show-frame-rate-meter #t')
     window = ShowBase()
     level = alias.levelloader.load_level(sys.argv[1], window)
     level.load()

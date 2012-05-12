@@ -17,6 +17,9 @@ __date__ = "May 11, 2012 8:27:57 PM"
 
 import panda3d.ai
 
+import alias.utils
+import alias.player
+
 
 class Level(object):
 
@@ -47,8 +50,8 @@ class Level(object):
         for enemy in self._enemies:
             enemy.load(self._window, self._ai_world)
 
-#        self._start_teleporter.load(self._window)
-#        self._exit_teleporter.load(self._window, self)
+        self._start_teleporter.load(self._window)
+        self._exit_teleporter.load(self._window, self)
 
         self._load_player()
 
@@ -71,7 +74,9 @@ class Level(object):
         return task.cont
 
     def _load_player(self):
-        pass
+
+        self._player = alias.player.Player(alias.utils.copy_vector(self._start_teleporter.position))
+        self._player.load(self._window, self)
 
     def _teardown_player(self):
         pass

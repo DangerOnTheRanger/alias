@@ -17,9 +17,15 @@ __date__ = "May 11, 2012 3:43:12 PM"
 
 import os
 
+import panda3d.core
+
 
 def get_data_directory():
     return os.path.normpath(os.path.join(
                                          os.path.dirname(os.path.abspath(__file__)),
                                          os.pardir,
                                          'data'))
+
+
+def copy_vector(vector):
+    return panda3d.core.Vec3(vector.getX(), vector.getY(), vector.getZ())

@@ -22,8 +22,9 @@ import panda3d.core
 import alias.utils
 
 
-CORRIDOR_SIZE = 20.0
-CORRIDOR_SCALE = 5.0
+DEFAULT_CORRIDOR_SIZE = 4.0
+CORRIDOR_SCALE = 10.0
+CORRIDOR_SIZE = DEFAULT_CORRIDOR_SIZE * CORRIDOR_SCALE
 
 
 class Corridor(object):
@@ -46,4 +47,3 @@ class Corridor(object):
         self._model.setH(self._rotation)
 
         self._model.reparentTo(window.render)
-        self._model.setTwoSided(True)

@@ -23,6 +23,7 @@ import Image
 import alias.utils
 import alias.level
 import alias.corridor
+import alias.teleporter
 
 
 BLACK = (0, 0, 0)
@@ -100,17 +101,23 @@ def determine_corridor_piece(image, pixel_location):
 
 def place_corridor(level, corridor_type, position, rotation):
 
-    copied_position = panda3d.core.Vec3(position.getX(), position.getY(), position.getZ())
+    copied_position = alias.utils.copy_vector(position)
     corridor = alias.corridor.Corridor(corridor_type, copied_position, rotation)
     level.add_corridor(corridor)
 
 
 def place_start_teleporter(level, position):
-    pass
+
+    copied_position = alias.utils.copy_vector(position)
+    teleporter = alias.teleporter.StartTeleporter(copied_position)
+    level.set_start_teleporter(teleporter)
 
 
 def place_exit_teleporter(level, position):
-    pass
+
+    copied_position = alias.utils.copy_vector(position)
+    teleporter = alias.teleporter.ExitTeleporter(copied_position)
+    level.set_exit_teleporter(teleporter)
 
 
 def load_level(level_name, window):
