@@ -19,6 +19,14 @@
   <Scalar> magfilter { LINEAR_MIPMAP_LINEAR }
   <Scalar> wrap { REPEAT }
 }
+<Texture> Material.001_01_I.teleport-lightmap.t {
+  "./teleport-lightmap.tga"
+  <Scalar> saved-result { 1 }
+  <Scalar> envtype { MODULATE }
+  <Scalar> minfilter { LINEAR_MIPMAP_LINEAR }
+  <Scalar> magfilter { LINEAR_MIPMAP_LINEAR }
+  <Scalar> wrap { REPEAT }
+}
 <Group> Circle {
   <VertexPool> Circle {
     <Vertex> 0 {
@@ -1986,311 +1994,373 @@
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 0 1 2 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 3 4 5 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 6 7 8 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 9 10 11 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 12 13 14 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 15 16 17 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 18 19 20 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 21 22 23 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 24 25 26 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 27 28 29 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 30 31 32 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 33 34 35 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 36 37 38 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 39 40 41 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 42 43 44 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 45 46 47 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 48 49 50 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 51 52 53 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 54 55 56 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 57 58 59 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 60 61 62 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 63 64 65 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 66 67 68 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 69 70 71 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 72 73 74 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 75 76 77 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 78 79 80 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 81 82 83 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 84 85 86 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 87 88 89 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 90 91 92 93 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 94 95 96 97 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 98 99 100 101 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 102 103 104 105 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 106 107 108 109 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 110 111 112 113 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 114 115 116 117 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 118 119 120 121 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 122 123 124 125 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 126 127 128 129 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 130 131 132 133 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 134 135 136 137 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 138 139 140 141 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 142 143 144 145 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 146 147 148 149 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 150 151 152 153 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 154 155 156 157 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 158 159 160 161 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 162 163 164 165 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 166 167 168 169 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 170 171 172 173 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 174 175 176 177 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 178 179 180 181 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 182 183 184 185 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 186 187 188 189 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 190 191 192 193 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 194 195 196 197 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 198 199 200 201 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 202 203 204 205 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 206 207 208 209 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 210 211 212 213 <Ref> { Circle } }
   }
   <Polygon> {
     <TRef> { Material.001_00_I.exit-teleport.tga }
+    <TRef> { Material.001_01_I.teleport-lightmap.t }
     <MRef> { Material.001 }
     <VertexRef> { 214 215 216 217 <Ref> { Circle } }
   }
