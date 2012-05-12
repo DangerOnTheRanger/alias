@@ -21,6 +21,7 @@ import panda3d.core
 import Image
 
 import alias.utils
+import alias.level
 import alias.corridor
 
 
@@ -47,10 +48,6 @@ def is_valid_coordinates(vector, image_width, image_height):
     return True
 
 
-def place_corridor(level, corridor_type, rotation):
-    pass
-
-
 def determine_corridor_piece(image, pixel_location):
 
     top_neighbor = (pixel_location[X], pixel_location[Y] + 1)
@@ -62,12 +59,12 @@ def determine_corridor_piece(image, pixel_location):
 
     for neighbor_coordinate in (top_neighbor, bottom_neighbor, left_neighbor, right_neighbor):
 
-        if is_valid_coordinates(neighbor_coordinate) is False:
+        if is_valid_coordinates(neighbor_coordinate, *image.size) is False:
 
             neighbor_translation_string += '0'
             continue
 
-        if image.getpixel(neighbor_coordinate[X], neighbor_coordinate[Y]) != BLACK:
+        if image.getpixel(neighbor_coordinate) != BLACK:
             neighbor_translation_string += '1'
 
         else:
@@ -78,20 +75,20 @@ def determine_corridor_piece(image, pixel_location):
 
     translation_table = {'1000' : (180, 'end'),
                          '0100' : (0, 'end'),
-                         '0010' : (90, 'end'),
-                         '0001' : (-90, 'end'),
+                         '0010' : (-90, 'end'),
+                         '0001' : (90, 'end'),
 
                          '1100' : (0, 'straight'),
                          '0011' : (90, 'straight'),
 
-                         '1001' : (-90, 'right-corner'),
+                         '1001' : (90, 'right-corner'),
                          '0101' : (0, 'right-corner'),
 
-                         '1010' : (90, 'left-corner'),
+                         '1010' : (-90, 'left-corner'),
                          '0110' : (0, 'left-corner'),
 
-                         '1110' : (90, 'tee'),
-                         '1101' : (-90, 'tee'),
+                         '1110' : (-90, 'tee'),
+                         '1101' : (90, 'tee'),
                          '1011' : (180, 'tee'),
                          '0111' : (0, 'tee'),
 
@@ -101,16 +98,34 @@ def determine_corridor_piece(image, pixel_location):
     return translation_table[neighbor_translation_string]
 
 
-def load_level(level_name):
+def place_corridor(level, corridor_type, position, rotation):
+
+    copied_position = panda3d.core.Vec3(position.getX(), position.getY(), position.getZ())
+    corridor = alias.corridor.Corridor(corridor_type, copied_position, rotation)
+    level.add_corridor(corridor)
+
+
+def place_start_teleporter(level, position):
+    pass
+
+
+def place_exit_teleporter(level, position):
+    pass
+
+
+def load_level(level_name, window):
+
+    level = alias.level.Level(window)
 
     corridor_map = Image.open(os.path.join(alias.utils.get_data_directory(),
                                             'levels',
                                             level_name,
                                             'corridor-map.png'))
 
-    map_width, map_height = image.size
+    map_width, map_height = corridor_map.size
     corridor_position = panda3d.core.Vec3(-(map_width * alias.corridor.CORRIDOR_SIZE) / 2,
-                                          - (map_height * alias.corridor.CORRIDOR_SIZE) / 2)
+                                          - (map_height * alias.corridor.CORRIDOR_SIZE) / 2,
+                                          0)
 
     pixels = list(corridor_map.getdata())
 
@@ -124,12 +139,16 @@ def load_level(level_name):
         if pixel != BLACK:
 
             pixel_location = calculate_pixel_location(index, map_width, map_height)
-            rotation, corridor_type = determine_corridor_piece(image, pixel_location)
+            rotation, corridor_type = determine_corridor_piece(corridor_map, pixel_location)
 
-            place_corridor(corridor_type, rotation)
+            place_corridor(level, corridor_type, corridor_position, rotation)
 
         if pixel == START_TELEPORTER:
+            place_start_teleporter(level, corridor_position)
 
-
+        elif pixel == EXIT_TELEPORTER:
+            place_exit_teleporter(level, corridor_position)
 
         corridor_position.setX(corridor_position.getX() + alias.corridor.CORRIDOR_SIZE)
+
+    return level

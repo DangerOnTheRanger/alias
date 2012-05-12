@@ -33,6 +33,12 @@ class Level(object):
     def add_enemy(self, enemy):
         self._enemies.append(enemy)
 
+    def set_start_teleporter(self, teleporter):
+        self._start_teleporter = teleporter
+
+    def set_exit_teleporter(self, teleporter):
+        self._exit_teleporter = teleporter
+
     def load(self):
 
         for corridor in self._corridors:
@@ -40,6 +46,11 @@ class Level(object):
 
         for enemy in self._enemies:
             enemy.load(self._window, self._ai_world)
+
+#        self._start_teleporter.load(self._window)
+#        self._exit_teleporter.load(self._window, self)
+
+        self._load_player()
 
         self._window.taskMgr.add(self._update_ai, 'AI update loop')
 
@@ -51,7 +62,16 @@ class Level(object):
         for corridor in self._corridors:
             corridor.teardown()
 
+        self._start_teleporter.teardown()
+        self._exit_teleporter.teardown()
+
     def _update_ai(self, task):
 
         self._ai_world.update()
         return task.cont
+
+    def _load_player(self):
+        pass
+
+    def _teardown_player(self):
+        pass

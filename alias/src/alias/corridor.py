@@ -15,6 +15,8 @@ __author__ = "DangerOnTheRanger"
 __date__ = "May 11, 2012 4:07:36 PM"
 
 
+import os
+
 import panda3d.core
 
 import alias.utils
@@ -39,6 +41,9 @@ class Corridor(object):
                                                            'corridors',
                                                            self._type))
         self._model.setScale(CORRIDOR_SCALE)
+
         self._model.setPos(self._position)
-        self._model.setHpr(self._rotation)
+        self._model.setH(self._rotation)
+
         self._model.reparentTo(window.render)
+        self._model.setTwoSided(True)
